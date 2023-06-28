@@ -24,15 +24,15 @@ h6 {
 }
 
 a {
-  color: #1e1e1e;
+  color: #E97A60;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-  color: #85a389;
+  color: #ED9470;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .p-r {
@@ -41,7 +41,7 @@ a:hover {
 
 .color-a {
   text-decoration: none;
-  color: #85a389;
+  color: #E97A60;
 }
 
 .color-d {
@@ -58,13 +58,13 @@ a:hover {
 .work-box,
 .service-box,
 .paralax-mf {
-  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 13px 8px -10px rgba(111, 92, 127, 0.1);
 }
 
 .box-shadow-a,
 .button:hover {
   text-decoration: none;
-  box-shadow: 0 0 0 4px #A2CDB0;
+  box-shadow: 0 0 0 4px #EBBAB6;
 }
 
 .display-5 {
@@ -100,7 +100,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #85a389;
+  background-color: #6F5C7F;
 }
 
 .overlay-mf {
@@ -169,7 +169,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #85a389;
+  background-color: #6F5C7F;
   margin: 0 auto;
 }
 
@@ -187,7 +187,7 @@ a:hover {
   content: "";
   position: absolute;
   height: 3px;
-  background-color: #85a389;
+  background-color: #6F5C7F;
   width: 100px;
   bottom: -12px;
 }
@@ -203,7 +203,7 @@ a:hover {
   background-color: #fff;
   margin-bottom: 3rem;
   z-index: 2;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(111, 92, 127, 0.06), 0 2px 5px 0 rgba(111, 92, 127, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -227,15 +227,16 @@ a:hover {
   font-size: 1.2rem;
   border-radius: 50%;
   line-height: 1.6;
-  margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #85a389;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px #ED9470;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #85a389;
+  background-color: #ED9470;
   color: #fff;
-  box-shadow: 0 0 0 3px #A2CDB0;
+  box-shadow: 0 0 0 3px #EBBAB6;
   transition: all 500ms ease;
 }
 
@@ -257,7 +258,7 @@ a:hover {
 }
 
 .list-ico span {
-  color: #85a389;
+  color: #EBBAB6;
   margin-right: 10px;
 }
 
@@ -315,7 +316,7 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #85a389;
+  background-color: #ED9470;
   opacity: 0.7;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -339,7 +340,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #85a389;
+  background: #ED9470;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -353,7 +354,7 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background: #A2CDB0;
+  background: #EBBAB6;
   color: #fff;
 }
 
@@ -418,16 +419,16 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #A2CDB0;
+  background-color: #E97A60;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
   text-decoration: none;
-  background-color: #85a389;
+  background-color: #E97A60;
   color: #fff;
-  border-color: #A2CDB0;
+  border-color: #ED9470;
 }
 
 .button-big {
@@ -691,7 +692,7 @@ a:hover {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #85a389;
+  color: #6F5C7F;
 }
 
 .navbar-mobile .getstarted,
@@ -806,15 +807,15 @@ a:hover {
 
 .hero-single .breadcrumb {
   background-color: transparent;
-  color: #85a389;
+  color: #6F5C7F;
 }
 
 .hero-single .breadcrumb .breadcrumb-item:before {
-  color: #A2CDB0;
+  color: #EBBAB6;
 }
 
 .hero-single .breadcrumb .breadcrumb-item.active {
-  color: #A2CDB0;
+  color: #EBBAB6;
 }
 
 .hero-single .breadcrumb a {
@@ -849,7 +850,7 @@ a:hover {
 }
 
 .skill-mf .progress {
-  background-color: #A2CDB0;
+  background-color: #ED9470;
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
@@ -857,7 +858,7 @@ a:hover {
 
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #85a389;
+  background-color: #E97A60;
 }
 
 /*--------------------------------------------------------------
@@ -928,12 +929,85 @@ a:hover {
   height: 60px;
   width: 60px;
   line-height: 1.5;
-  box-shadow: 0 0 0 10px #A2CDB0;
+  box-shadow: 0 0 0 10px #EBBAB6;
 }
 
 .counter-num .counter {
   font-size: 2rem;
   margin-bottom: 0;
+}
+
+/*------/ Sidebar /------*/
+.widget-sidebar .sidebar-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-left: 5px solid #85a389;
+  padding-left: 15px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.widget-sidebar .list-sidebar li {
+  position: relative;
+  padding: 6px 0 6px 24px;
+}
+
+.widget-sidebar .list-sidebar li:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  left: 0;
+  background-color: #85a389;
+  top: 20px;
+}
+
+.sidebar-search input {
+  background-color: #fff;
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.sidebar-search .btn-search {
+  background-color: #85a389;
+  border-color: #85a389;
+  border-radius: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.widget-tags ul li {
+  display: inline-block;
+  background-color: #85a389;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+}
+
+.widget-tags ul li a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: #6F5C7F;
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -1057,7 +1131,7 @@ a:hover {
 
 /*--------------------------------------------------------------
 # Testimonials
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .testimonial-box {
   color: #fff;
   text-align: center;
@@ -1128,7 +1202,7 @@ a:hover {
 
 /*--------------------------------------------------------------
 # Contact
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -1226,7 +1300,7 @@ a:hover {
 
 /*--------------------------------------------------------------
 # Blog
---------------------------------------------------------------*/
+--------------------------------------------------------------
 @media (min-width: 767px) {
   .card-blog {
     margin-bottom: 3rem;
@@ -1285,7 +1359,7 @@ a:hover {
 
 /*--------------------------------------------------------------
 # Blog Single
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .post-box,
 .form-comments,
 .box-comments,
@@ -1343,7 +1417,7 @@ a:hover {
   font-style: italic;
 }
 
-/*------/ Comments /------*/
+/*------/ Comments /------
 .box-comments .list-comments li {
   padding-bottom: 40px;
 }
@@ -1386,76 +1460,4 @@ a:hover {
 .box-comments .comment-children {
   margin-left: 40px;
 }
-
-/*------/ Sidebar /------*/
-.widget-sidebar .sidebar-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  border-left: 5px solid #85a389;
-  padding-left: 15px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-.widget-sidebar .list-sidebar li {
-  position: relative;
-  padding: 6px 0 6px 24px;
-}
-
-.widget-sidebar .list-sidebar li:before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 1px;
-  left: 0;
-  background-color: #85a389;
-  top: 20px;
-}
-
-.sidebar-search input {
-  background-color: #fff;
-  border-radius: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.sidebar-search .btn-search {
-  background-color: #85a389;
-  border-color: #85a389;
-  border-radius: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.widget-tags ul li {
-  display: inline-block;
-  background-color: #85a389;
-  padding: 0.2rem 0.6rem;
-  margin-bottom: 0.5rem;
-  border-radius: 15px;
-}
-
-.widget-tags ul li a {
-  color: #fff;
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-footer {
-  text-align: center;
-  color: #fff;
-  padding: 25px 0;
-  background: #F1C27B;
-}
-
-footer .copyright {
-  margin-bottom: 0.3rem;
-}
-
-footer .credits {
-  margin-bottom: 0;
-}
-
-footer .credits a {
-  color: #fff;
-}
+*/
