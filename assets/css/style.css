@@ -227,7 +227,7 @@ a:hover {
   font-size: 1.2rem;
   border-radius: 50%;
   line-height: 1.6;
-  margin-right: 20;
+  margin: 0 15px 0 0;
   box-shadow: 0 0 0 3px #ED9470;
   transition: all 500ms ease;
 }
@@ -270,11 +270,11 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #85a389;
+  box-shadow: 0 0 0 10px #EBBAB6;
   display: block;
 }
 
-/*------/ Owl Carousel /------*/
+/*------/ Owl Carousel 
 .owl-theme .owl-dots {
   text-align: center;
   margin-top: 18px;
@@ -302,7 +302,7 @@ a:hover {
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: #1B1B1B;
   width: 25px;
-}
+} /------*/
 
 /*--/ Scrolltop s /--*/
 .scrolltop-mf {
