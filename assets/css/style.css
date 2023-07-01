@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-  color: #ED9470;
+  color: #EBBAB6;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -227,8 +227,7 @@ a:hover {
   font-size: 1.2rem;
   border-radius: 50%;
   line-height: 1.6;
-  align-items: center;
-  justify-content: center;
+  margin-right: 20;
   box-shadow: 0 0 0 3px #ED9470;
   transition: all 500ms ease;
 }
@@ -419,7 +418,7 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #E97A60;
+  background-color: #ED9470;
   color: #fff;
   transition: all 500ms ease;
 }
@@ -850,7 +849,7 @@ a:hover {
 }
 
 .skill-mf .progress {
-  background-color: #ED9470;
+  background-color: #EBBAB6;
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
@@ -875,8 +874,8 @@ a:hover {
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #85a389;
-  box-shadow: 0 0 0 10px #A2CDB0;
+  background-color: #E97A60;
+  box-shadow: 0 0 0 10px #EBBAB6;
 }
 
 .service-box .service-ico {
@@ -928,6 +927,8 @@ a:hover {
 .counter-ico .ico-circle {
   height: 60px;
   width: 60px;
+  align-items: center;
+  justify-content: center;
   line-height: 1.5;
   box-shadow: 0 0 0 10px #EBBAB6;
 }
