@@ -227,7 +227,7 @@ a:hover {
   font-size: 1.2rem;
   border-radius: 50%;
   line-height: 1.6;
-  margin: 0 15px 0 0;
+  margin: 0 20px 0 0;
   box-shadow: 0 0 0 3px #ED9470;
   transition: all 500ms ease;
 }
@@ -380,7 +380,7 @@ a:hover {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #85a389;
+  border-top: 6px solid #E97A60;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -726,7 +726,7 @@ a:hover {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #85a389;
+  color: #E97A60;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -942,7 +942,7 @@ a:hover {
 .widget-sidebar .sidebar-title {
   font-size: 1.6rem;
   font-weight: 600;
-  border-left: 5px solid #85a389;
+  border-left: 5px solid #E97A60;
   padding-left: 15px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -959,7 +959,7 @@ a:hover {
   width: 10px;
   height: 1px;
   left: 0;
-  background-color: #85a389;
+  background-color: #E97A60;
   top: 20px;
 }
 
@@ -970,8 +970,8 @@ a:hover {
 }
 
 .sidebar-search .btn-search {
-  background-color: #85a389;
-  border-color: #85a389;
+  background-color: #E97A60;
+  border-color: #E97A60;
   border-radius: 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -979,7 +979,7 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #85a389;
+  background-color: #E97A60;
   padding: 0.2rem 0.6rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
@@ -1012,8 +1012,69 @@ footer .credits a {
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Resume
 --------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #6F5C7F;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f5f5f5;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #6F5C7F;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------
 .work-box {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
@@ -1067,7 +1128,7 @@ footer .credits a {
 
 /*--------------------------------------------------------------
 # Portfolio Details
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .portfolio-details {
   padding-top: 40px;
 }
