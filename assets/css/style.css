@@ -274,7 +274,7 @@ a:hover {
   display: block;
 }
 
-/*------/ Owl Carousel 
+/*------/ Owl Carousel /------*/
 .owl-theme .owl-dots {
   text-align: center;
   margin-top: 18px;
@@ -288,21 +288,21 @@ a:hover {
   width: 18px;
   height: 7px;
   margin: 5px 5px;
-  background: #A2CDB0;
-  border: 0px solid #A2CDB0;
+  background: #ED9470;
+  border: 0px solid #ED9470;
   display: block;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #A2CDB0;
+  background-color: #ED9470;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: #1B1B1B;
   width: 25px;
-} /------*/
+} 
 
 /*--/ Scrolltop s /--*/
 .scrolltop-mf {
@@ -1089,8 +1089,8 @@ footer .credits a {
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   color: #050d18;
 }
 
