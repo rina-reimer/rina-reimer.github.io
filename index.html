@@ -46,6 +46,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
           <li><a class="nav-link scrollto" href="#academic">Academic</a></li>
           <li><a class="nav-link scrollto " href="#resume">Resume</a></li>
         </ul>
@@ -104,13 +105,13 @@
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+                    <span>HTML/CSS</span> <span class="pull-right">30%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <span>C++</span> <span class="pull-right">10%</span>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>HTML/CSS</span> <span class="pull-right">10%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -157,47 +158,56 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
+    <!-- ======= Projects Section ======= -->
+    <section id="projects">
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
       <div class="overlay-mf"></div>
-      <div class="container position-relative">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
+          <div class="col-md-12">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <img class="ico-circle"><i class="bi bi-people"></i></img>
+                      <span class="author">Seam Carving</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Uses Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <span class="ico-circle"><i class="bi bi-people"></i></span>
+                      <span class="author">Electrical Circuit Calculator</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Calculates voltages at nodes and current along connections in a given electrical circuit.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
               </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="3.64" data-purecounter-duration="1" data-purecounter-decimals="2" class="counter purecounter"></p>
-                <span class="counter-text">GPA</span>
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">CSE CLASSES TAKEN</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">(A)MATH CLASSES TAKEN</span>
-              </div>
-            </div>
+
+            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+          
+        </div> -->
           </div>
         </div>
       </div>
-    </div><!-- End Counter Section -->
+    </div>
+  </section><!-- End Projects Section -->
 
     <!-- ======= Academics Section ======= -->
     <section id="academic" class="academic-mf pt-5 route">
@@ -286,6 +296,48 @@
         </div>
       </div>
     </section><!-- End Acdemics Section -->
+
+    <!-- ======= Counter Section ======= -->
+    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-people"></i></span>
+              </div>
+              <div class="counter-num">
+                <p>3.64</p>
+                <span class="counter-text">GPA</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-award"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">CSE CLASSES TAKEN</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-award"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">(A)MATH CLASSES TAKEN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Counter Section -->
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
