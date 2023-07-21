@@ -164,7 +164,7 @@
    */
   const typed = select('.typed')
   if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
+    let typed_strings = typed.getAttribute('lng-tag')
     typed_strings = typed_strings.split(',')
     new Typed('.typed', {
       strings: typed_strings,

@@ -23,6 +23,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- jQuery Source -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <!-- =======================================================
   * Template Name: DevFolio
   * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -32,7 +35,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body id="page-top" onload= "translate('en', 'lng-tag')">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -44,11 +47,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
-          <li><a class="nav-link scrollto" href="#academic">Academic</a></li>
-          <li><a class="nav-link scrollto " href="#resume">Resume</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" lng-tag = "home"></a></li>
+          <li><a class="nav-link scrollto" href="#about" lng-tag = "about"></a></li>
+          <li><a class="nav-link scrollto" href="#projects" lng-tag = "projects"></a></li>
+          <li><a class="nav-link scrollto" href="#academic" lng-tag = "academics"></a></li>
+          <li><a class="nav-link scrollto " href="#resume" lng-tag = "resume"></a></li>
+          <li><button id="enTranslator">EN</button>
+              <button id="deTranslator">DE</button></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,7 +69,7 @@
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">Rina Reimer</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Student, Math Tutor, Developer, Team Player"></span></p>
+          <p class="hero-subtitle"><span class="typed" lng-tag="Student, Math Tutor, Developer, Team Player"></span></p>
         </div>
       </div>
     </div>
@@ -88,15 +93,15 @@
                     </div>
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
-                        <p><span class="title-s">School: </span> <span>University of Washington</span></p>
-                        <p><span class="title-s">Graduation Year: </span> <span>2026</span></p>
-                        <p><span class="title-s">Location: </span> <span>Seattle, WA</span></p>
-                        <p><span class="title-s">Major: </span> <span>B.S. Applied and Computational Mathematical Sciences,<br> B.A. German Studies</span></p>
+                        <p><span class="title-s" lng-tag = "school"></span> <span>University of Washington</span></p>
+                        <p><span class="title-s" lng-tag = "grad-year"></span> <span>2026</span></p>
+                        <p><span class="title-s" lng-tag = "loc"></span> <span>Seattle, WA</span></p>
+                        <p><span class="title-s" lng-tag = "major"></span> <span lng-tag = "major-title"></span></p>
                       </div>
                     </div>
                   </div>
                   <div class="skill-mf">
-                    <p class="title-s">Toolbox</p>
+                    <p class="title-s" lng-tag = "toolbox"></p>
                     <span>Java</span> <span class="pull-right">70%</span>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -109,42 +114,24 @@
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <span>C++</span> <span class="pull-right">10%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="about-me pt-4 pt-md-0">
                     <div class="title-box-2">
-                      <h5 class="title-left">
-                        Hey There!
-                      </h5>
+                      <h5 class="title-left" lng-tag = "greeting"></h5>
                     </div>
-                    <p class="lead">
-                      <i>I'm a second-year student, studying mathematics and how it relates to program efficency. I love 
-                      coding and designing programs.</i>
-                    </p>
-                    <p class="lead">
-                     I have challenged myself by taking difficult classes since being enrolled at UW. I have years of experience collaborating
-                     and explaining my ideas from tutoring and volunteering.
+                    <p class="lead" lng-tag = "abt1"></p>
+                    <p class="lead" lng-tag = "abt2">
                   </div>
                   <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
-                      Get in Touch!
-                    </h5>
+                    <h5 class="title-left" lng-tag = "contact"></h5>
                   </div>
                   <div class="more-info">
-                    <p class="lead">
-                      I'm looking for industry experience and other opportunites to implement programs. You can check out my 
-                      <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer">personal projects</a> or reach me by email at
-                       <a href="mailto:rinareimer616@gmail.com" title="send me an email" target="_blank" rel="noopener noreferrer">rinareimer616@gmail.com</a>. 
-                      
-                    </p>
+                    <p class="lead" lng-tag = "con1"></p>
                   <div class="socials">
                       <ul>
-                        <li><a href="mailto:rinareimer616@gmail.com" title="send me an email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
+                        <li><a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
                         <li><a href="https://www.linkedin.com/in/katharina-reimer-a058a6235/" title="Katharina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
                         <li><a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
                       </ul>
@@ -173,11 +160,10 @@
                   <div class="testimonial-box">
                     <div class="author-test">
                       <img src="assets/img/testimonial-2.jpeg" alt="Seam Carving Image" class="rounded-circle b-shadow-a">
-                      <span class="author">Seam Carving</span>
+                      <span class="author" lng-tag = "proj1-title"></span>
                     </div>
                     <div class="content-test">
-                      <p class="description lead">
-                        Uses Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.
+                      <p class="description lead" lng-tag = "proj1-desc">
                       </p>
                     </div>
                   </div>
@@ -187,12 +173,10 @@
                   <div class="testimonial-box">
                     <div class="author-test">
                       <img src="assets/img/testimonial-1.jpg" alt="Electrical Circuit Image" class="rounded-circle b-shadow-a">
-                      <a href="https://github.com/rina-reimer/electrical-circuit-calculator" title = "GitHub Link" target="_blank" rel="noopener noreferrer"><span class="author">Electrical Circuit Calculator</span></a>
+                      <a href="https://github.com/rina-reimer/electrical-circuit-calculator" title = "GitHub Link" target="_blank" rel="noopener noreferrer"><span class="author" lng-tag = "proj2-title"></span></a>
                     </div>
                     <div class="content-test">
-                      <p class="description lead">
-                        Calculates voltages at nodes and current along connections in a given electrical circuit.
-                      </p>
+                      <p class="description lead" lng-tag = "proj2-desc"></p>
                     </div>
                   </div>
                 </div><!-- End testimonial item -->
@@ -230,11 +214,8 @@
                 <a href="https://courses.cs.washington.edu/courses/cse373/" title = "CSE 373 Course Website" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-database-fill-add"></i></span></a>
               </div>
               <div class="service-content">
-                <h2 class="s-title">CSE 373 <br>Data Structures and Algorithms</h2>
-                <p class="s-description text-center">
-                  Hash tables, priority queues, graphs, balanced trees, 
-                  asymptotic analysis, and graph algorithms.
-                </p>
+                <h2 class="s-title" lng-tag = "cse373-title"></h2>
+                <p class="s-description text-center" lng-tag = "cse373-desc"></p>
               </div>
             </div>
           </div>
@@ -244,10 +225,8 @@
                 <a href="https://amath.washington.edu/courses/2023/spring/amath/352/b" title = "AMATH 352 Course Website" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-table"></i></span></a>
               </div>
               <div class="service-content">
-                <h2 class="s-title">AMATH 352 <br>Applied Linear Algebra</h2>
-                <p class="s-description text-center">
-                  LU factorization, QR factorization, eigenvalues and eigenvectors, and singular value decomposition.
-                </p>
+                <h2 class="s-title" lng-tag = "amath352-title"></h2>
+                <p class="s-description text-center" lng-tag = "amath352-desc"></p>
               </div>
             </div>
           </div>
@@ -257,10 +236,8 @@
                 <a href="https://courses.cs.washington.edu/courses/cse123/" title = "CSE 123 Course Website" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-keyboard-fill"></i></span></a>
               </div>
               <div class="service-content">
-                <h2 class="s-title">CSE 123 <br>Introduction to Computer Programming III</h2>
-                <p class="s-description text-center">
-                  Recursion, inheritance, and reference semantics.
-                </p>
+                <h2 class="s-title" lng-tag = "cse123-title"></h2>
+                <p class="s-description text-center" lng-tag="cse123-desc"></p>
               </div>
             </div>
           </div>
@@ -270,11 +247,8 @@
                 <a href="https://canvas.uw.edu/courses/1617049/pages/syllabus" title = "ENGL 288 Course Website" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-file-earmark-text-fill"></i></span></a>
               </div>
               <div class="service-content">
-                <h2 class="s-title">ENGL 288 <br>Technical and Professional Writing</h2>
-                <p class="s-description text-center">
-                  Interviews, design documents, writing for an audience, proposals, and 
-                  properly communicating ideas in professional environment.
-                </p>
+                <h2 class="s-title" lng-tag = "engl288-title"></h2>
+                <p class="s-description text-center" lng-tag = "engl288-desc"></p>
               </div>
             </div>
           </div>
@@ -284,10 +258,8 @@
                 <a href="https://sites.math.washington.edu/~m208/" title = "MATH 208 Course Website" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-grid-3x2-gap-fill"></i></span></a>
               </div>
               <div class="service-content">
-                <h2 class="s-title">MATH 208 <br>Introduction to Matrix Algebra</h2>
-                <p class="s-description text-center">
-                  Linear transformations, subspaces, determinants, and eigenvalues and eigenvectors.
-                </p>
+                <h2 class="s-title" lng-tag = "math208-title"></h2>
+                <p class="s-description text-center" lng-tag="math208-desc"></p>
               </div>
             </div>
           </div>
@@ -306,7 +278,7 @@
                 <span class="ico-circle"><i class="bi bi-people"></i></span>
               </div>
               <div class="counter-num">
-                <p font-size= "6rem" margin-bottom="0" color = "#fff">3.64</p>
+                <h2 margin-top="20%" color = "#ffffff">3.64</h2>
                 <span class="counter-text">GPA</span>
               </div>
             </div>
@@ -318,7 +290,7 @@
               </div>
               <div class="counter-num">
                 <p data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">CSE CLASSES TAKEN</span>
+                <span class="counter-text" lng-tag = "cse-classes-taken"></span>
               </div>
             </div>
           </div>
@@ -328,8 +300,19 @@
                 <span class="ico-circle"><i class="bi bi-award"></i></span>
               </div>
               <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">(A)MATH CLASSES TAKEN</span>
+                <p data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text" lng-tag = "math-classes-taken"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-award"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text" lng-tag = "amath-classes-taken"></span>
               </div>
             </div>
           </div>
@@ -342,58 +325,35 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Resume
-              </h3>
-              <p class="subtitle-a">
-                Previous Work Experience 
-              </p>
+            <div class="title-box text-center" >
+              <h3 class="title-a" lng-tag = "resume" margin-top="80%"></h3>
               <div class="line-mf"></div>
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-
-            <h3 class="resume-title">Professional Experience</h3>
+            <h3 class="resume-title" lng-tag = "resume-desc"></h3>
             <div class="resume-item">
-              <h4>Math Tutor</h4>
-              <h5>May 2021 - September 2022</h5>
-              <p><em>Freelance</em></p>
-              <ul>
-                <li>Marketed myself and sourced job opportunities through community forums to connect with struggling students.</li>
-                <li>Worked with students individually to offer high-level explanations of complex topics and created tailored review on key concepts.</li>     
-              </ul>
+              <h4 lng-tag = "work1-title"></h4>
+              <h5 lng-tag = "work1-company"></h5>
+              <p><em lng-tag = "work1-dates"></em></p>
+              <ul lng-tag = "work1-desc"></ul>
             </div>
             <div class="resume-item">
-              <h4>Camp Counselor</h4>
-              <h5>June 2016 - Present</h5>
-              <p><em>Diablo Day Camp</em></p>
-              <ul>
-                <li>Volunteered for 6 years as a Counselor in Training, growing into a senior leadership role.</li>
-                  <li>Led daily meetings to plan and execute camp-wide activities.</li>
-                  <li>Organized and led sessions and create long-lasting digital presentations on camp skills. </li>
-                  <li>Guided younger trainers on effective leadership.</li>
-                  <li>Personally requested to return annually due to demonstrated leadership and camper engagement skills.</li>
-                  <li>Continued to organize and lead camp by returning as a counselor, planning activities and meals for the camp session.</li>
-                       
-              </ul>
+              <h4 lng-tag = "work2-title"></h4>
+              <h5 lng-tag = "work2-company"></h5>
+              <p><em lng-tag = "work2-dates"></em></p>
+              <ul lng-tag = "work2-desc"></ul>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Extracurriculars &amp; Affiliations</h3>
+            <h3 class="resume-title" lng-tag = "extracirriculars"></h3>
             <div class="resume-item">
-              <h4>Student</h4>
-              <h5>September 2020 - Present</h5>
-              <p><em>BYJU's Future School</em></p>
-              <ul>
-                <li>Online individual Python training program based in India.</li>
-                <li>Mastered data cleaning/visualization and statistical representation techniques through hands-on data analysis projects with large data sets from various international sources.</li>
-                <li>Gained coding experience and deepened knowledge of machine learning and probability.</li>
-                  
-              </ul>
+              <h4 lng-tag = "xcirr1-title"></h4>
+              <h5 lng-tag = "xcirr1-grp"></h5>
+              <p><em lng-tag = "xcirr1-dates"></em></p>
+              <ul lng-tag = "xcirr1-desc"></ul>
             </div>
           </div>
         </div>
@@ -436,6 +396,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Translation Files -->
+  <script src="assets/js/translate.js"></script>
+  <script src="assets/js/index.js"></script>
 
 </body>
 
