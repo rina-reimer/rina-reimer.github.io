@@ -16,6 +16,9 @@ $(document).ready(function(){
   //This is id of HTML element (English) with attribute lng-tag
   $("#enTranslator").click(function(){
     translate('en', 'lng-tag');
+    //const typed_strings = document.getElementById("typed-intro");
+    //console.log(typed_strings)
+    //typed_strings.setAttribute('data-typed-items', 'translation, typed, tester, if this is showing, something went right');
   });
   //This is id of HTML element (Deutsch) with attribute lng-tag
   $("#deTranslator").click(function(){

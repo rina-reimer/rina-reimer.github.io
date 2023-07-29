@@ -7,7 +7,6 @@ class Translate {
 	//translate 
 	process() {
 		var attr = this.attribute;
-		console.log(attr);
 		var xrhFile = new XMLHttpRequest();
 		//load content data 
 		xrhFile.open("GET", "https://rina-reimer.github.io/assets/lng/" + this.lng + ".json", false);
