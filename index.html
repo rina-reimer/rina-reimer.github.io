@@ -52,8 +52,8 @@
           <li><a class="nav-link scrollto" href="#projects" lng-tag = "projects"></a></li>
           <li><a class="nav-link scrollto" href="#academic" lng-tag = "academics"></a></li>
           <li><a class="nav-link scrollto " href="#resume" lng-tag = "resume"></a></li>
-          <li><button class="trans-en" id="enTranslator" style="margin-left: 20px;">EN</button>
-              <button class="trans-de" id="deTranslator">DE</button></li>
+          <li><button class="trans-en" id="enTranslator" style="margin-left: 20px;" onclick="translateEN();">EN</button>
+              <button class="trans-de" id="deTranslator" onclick="translateDE();">DE</button></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -69,7 +69,7 @@
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">Rina Reimer</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items = "Student, Math Tutor, Developer, Team Player" lng-tag = "Student, Math Tutor, Developer, Team Player"></span></p>
+          <p class="hero-subtitle"><span id = 'typed-animation' class="typed" data-typed-items = "Student, blah, blah"></span></p>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                        <img src="assets/img/profile.jpeg" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
@@ -273,7 +273,7 @@
                 <span class="ico-circle"><i class="bi bi-people"></i></span>
               </div>
               <div class="counter-num">
-                <p style="color: white; font-size: 2rem; margin-bottom: 0;" >3.64</p>
+                <p style="color: white; font-size: 2rem; margin-bottom: 0;" >3.64/4</p>
                 <span class="counter-text">GPA</span>
               </div>
             </div>
@@ -288,7 +288,7 @@
                 <span class="counter-text" lng-tag = "cse-classes-taken"></span>
               </div>
             </div>
-          </div>
+           </div>
           <div class="col-sm-3 col-lg-3">
             <div class="counter-box pt-4 pt-md-0">
               <div class="counter-ico">
@@ -386,7 +386,6 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -394,6 +393,26 @@
   <!-- Translation Files -->
   <script src="assets/js/translate.js"></script>
   <script src="assets/js/index.js"></script>
+
+  <!-- Typed Setup -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    let typed = new Typed('#typed-animation', {
+      strings: ['Student', 'Math Tutor', 'Developer', 'Team Player'],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+
+    function translateEN() {
+      typed.strings = ['Student', 'Math Tutor', 'Developer', 'Team Player']
+    }
+
+    function translateDE() {
+      typed.strings = ['Studentin', 'Mathematik Nachhilfe Lehrerin', 'Entwicklerin', 'Teamplayer']
+    }
+  </script>
 
 </body>
 
