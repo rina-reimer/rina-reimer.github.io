@@ -20,6 +20,8 @@
     "proj1-desc": "<i>Main Developer</i><br>Java object-oriented program utilizing Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.<br>3-week long development stage, building upon CSE 373 curriculum.",
     "proj2-title": "Electrical Circuit Calculator",
     "proj2-desc": "<i>Project Creator</i><br>Python program that calculates voltages at nodes and current along connections in a given electrical circuit.<br>Demonstrates linear algebra expertise  with Markdown explanations.",
+    "proj3-title": "BYJU's Capstones",
+    "proj3-desc": "<i>Project Creator</i><br>A collection of my Python capstone projects from BYJU's FutureSchool.",
     "cse373-title": "CSE 373 <br>Data Structures and Algorithms",
     "cse373-desc": "Hash tables, priority queues, graphs, balanced trees, asymptotic analysis, and graph algorithms.",
     "amath352-title": "AMATH 352 <br>Applied Linear Algebra",                  
