@@ -10,10 +10,10 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  --color-primary: #9E8EB9;
-  --color-secondary: #C3C7E9;
-  --color-contrast: #FFAB85;
-  --color-background: #4C2C69;
+  --color-primary: #776483;
+  --color-secondary: #BBAAB8;
+  --color-contrast: #E99E75;
+  --color-background: #44426E;
   --color-text: #14110F;
   --color-overlay: #F9F8F0;
   --color-white: #fff;
@@ -262,7 +262,7 @@ a:hover {
 .socials .ico-circle:hover {
   background-color: var(--color-contrast);
   color: var(--color-white);
-  box-shadow: 0 0 0 3px var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-secondary);
   transition: all 500ms ease;
 }
 
@@ -300,36 +300,6 @@ a:hover {
   box-shadow: 0 0 0 10px B6;
   display: block;
 }
-
-/*------/ Owl Carousel /------*/
-.owl-theme .owl-dots {
-  text-align: center;
-  margin-top: 18px;
-}
-
-.owl-theme .owl-dots .owl-dot {
-  display: inline-block;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 18px;
-  height: 7px;
-  margin: 5px 5px;
-  background: var(--color-contrast);
-  border: 0px solid var(--color-contrast);
-  display: block;
-  transition: all 0.6s ease-in-out;
-  cursor: pointer;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-  background-color: var(--color-contrast);
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  background-color: var(--color-border);
-  width: 25px;
-} 
 
 /*--/ Scrolltop s /--*/
 .scrolltop-mf {
@@ -435,8 +405,8 @@ a:hover {
   user-select: none;
   font-size: 1rem;
   border-radius: 0.3rem;
-  border: 1px solid transparent;
-  transition: all 500ms ease;
+  border: 2px solid var(--color-border);
+  transition: all 200ms ease;
   cursor: pointer;
 }
 
@@ -446,6 +416,7 @@ a:hover {
 
 .button:hover {
   background-color: var(--color-contrast);
+  border: 3px solid transparent;
   color: var(--color-white);
   transition: all 500ms ease;
 }
@@ -478,7 +449,7 @@ a:hover {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   z-index: 997;
   padding: 20px 0;
   border-bottom: 3px solid var(--color-border); /* Add a bottom border */
@@ -501,7 +472,7 @@ a:hover {
 }
 
 #header.header-scrolled {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   padding: 12px 0;
 }
 
@@ -616,7 +587,7 @@ a:hover {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -856,7 +827,12 @@ a:hover {
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
+  color: var(--color-overlay)
+}
+
+.about-mf .title-s,.title-left {
+  color: var(--color-secondary)
 }
 
 .about-mf .about-img {
@@ -874,93 +850,6 @@ a:hover {
     border-bottom: 3px solid var(--color-border);
     border-top: 3px solid var(--color-border);
   }
-}
-
-.skill-mf span {
-  color: var(--color-text);
-}
-
-.skill-mf .progress {
-  background-color: var(--color-primary);
-  margin: 0.5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: 0.7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: 0.7rem;
-  background-color: var(--color-secondary);
-}
-
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonial-box {
-  color: var(--color-white);
-  text-align: center;
-}
-
-.testimonial-box .author-test {
-  margin-top: 1rem;
-}
-
-.testimonial-box .author-test img {
-  margin: 0 auto;
-}
-
-.testimonial-box .author {
-  color: var(--color-white);
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 1rem 0;
-  display: block;
-  font-size: 1.4rem;
-}
-
-.testimonial-box .comit {
-  font-size: 2rem;
-  color: var(--color-primary);
-  background-color: var(--color-white);
-  width: 52px;
-  height: 52px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  line-height: 1.6;
-}
-
-@media (min-width: 768px) {
-  .testimonial-box .description {
-    padding: 0 5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-box .description {
-    padding: 0 8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-box .description {
-    padding: 0 13rem;
-  }
-}
-
-.swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.4);
-  opacity: 1;
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-white);
 }
 
 /*--------------------------------------------------------------
@@ -1120,18 +1009,23 @@ footer .credits a {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 .resume .resume-title {
+  padding-top: 10px; 
+  padding-bottom: 40px; 
+  color: var(--color-primary);
   font-size: 26px;
   font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   color: var(--color-border);
+  text-align: center;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid var(--color-background);
   position: relative;
 }
 
@@ -1140,7 +1034,6 @@ footer .credits a {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Space Grotesk", sans-serif;
   color: var(--color-border);
   margin-bottom: 10px;
 }
@@ -1169,11 +1062,12 @@ footer .credits a {
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: var(--color-white);
+  background: var(--color-overlay);
   border: 2px solid var(--color-background);
+  transform: translateX(-17.5px); /* Adjust the value as needed */
 }
