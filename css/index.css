@@ -10,12 +10,12 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  --color-primary: #776483;
-  --color-secondary: #BBAAB8;
-  --color-contrast: #E99E75;
-  --color-background: #44426E;
+  --color-primary: #92BAD9;
+  --color-secondary: #AD93BE;
+  --color-contrast: #5B5992;
+  --color-background: #403369;
   --color-text: #14110F;
-  --color-overlay: #F9F8F0;
+  --color-overlay: #f6eee3;
   --color-white: #fff;
   --color-border: #14110F;
 }
@@ -45,10 +45,6 @@ a:hover {
   color: var(--color-primary);
   text-decoration: underline var(--color-secondary);
   transition: all 0.2s ease-in-out;
-}
-
-.services-a:hover {
-  text-decoration: none;
 }
 
 .p-r {
@@ -190,6 +186,26 @@ a:hover {
 .subtitle-a {
   text-decoration: none;
   color: var(--color-text);
+}
+
+.subtitle-b {
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--color-text);
+  transform: translateY(10px);
+}
+
+.subtitle-b:hover {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.subtitle-s {
+  text-decoration: none;
+  color: var(--color-contrast);
+  font-size: 1.5rem;
 }
 
 .line-mf {
@@ -398,6 +414,37 @@ a:hover {
 .button {
   display: inline-block;
   padding: 0.3rem 0.6rem;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid var(--color-border);
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.trans-en {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid var(--color-border);
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.trans-de {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -741,6 +788,7 @@ a:hover {
   height: 100vh;
   position: relative;
   color: var(--color-text);
+  padding-top: 10rem;
 }
 
 .hero .hero-content {
@@ -828,11 +876,11 @@ a:hover {
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-color: var(--color-primary);
-  color: var(--color-overlay)
+  color: var(--color-text)
 }
 
 .about-mf .title-s,.title-left {
-  color: var(--color-secondary)
+  color: var(--color-text)
 }
 
 .about-mf .about-img {
@@ -865,6 +913,10 @@ a:hover {
   transition: all 200ms ease-in-out;
 }
 
+.services-a:hover {
+  text-decoration: none;
+}
+
 .service-box:hover {
   box-shadow: 10px 10px var(--color-border);
   transform: translateY(-5px);
@@ -895,10 +947,19 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   padding: 0.4rem 0;
+  margin-bottom: 1rem;
 }
 
 .service-box .s-description {
   color: var(--color-text);
+}
+
+.service-box img {
+  border-radius: 20px; 
+  border: #14110F solid 3px;
+  object-fit: cover; /* or object-fit: cover; */
+  width: 100%;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -985,30 +1046,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-footer {
-  text-align: center;
-  color: var(--color-border);
-  padding: 25px 0;
-  background: var(--color-contrast);
-}
-
-footer .copyright {
-  margin-bottom: 0.3rem;
-}
-
-footer .credits {
-  margin-bottom: 0;
-}
-
-footer .credits a {
-  color: var(--color-border);
-}
-
-/*--------------------------------------------------------------
 # Resume
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .resume {
   font-family: "Space Grotesk", sans-serif;
 }
@@ -1069,5 +1108,27 @@ footer .credits a {
   top: 0;
   background: var(--color-overlay);
   border: 2px solid var(--color-background);
-  transform: translateX(-17.5px); /* Adjust the value as needed */
+  transform: translateX(-17.5px); 
+} */
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: var(--color-border);
+  padding: 25px 0;
+  background: var(--color-contrast);
+}
+
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: var(--color-border);
 }

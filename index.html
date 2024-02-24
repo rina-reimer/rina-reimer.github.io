@@ -39,8 +39,8 @@
         <ul>
           <li><a class="nav-link scrollto" href="html/about.html" lng-tag = "about"></a></li>
           <li><a class="nav-link scrollto" href="html/projects.html" lng-tag = "projects"></a></li>
-          <li><a class="nav-link scrollto " href="html/resume.html" lng-tag = "resume"></a></li>
-          <li><button class="trans-en" id="enTranslator" style="margin-left: 20px;" onclick="translateEN();">EN</button>
+          <li><a class="nav-link scrollto " href="../img/resume.pdf" target="_blank" rel="noopener noreferrer" lng-tag = "resume"></a></li>
+          <li><button class="trans-en" id="enTranslator" onclick="translateEN();">EN</button>
               <button class="trans-de" id="deTranslator" onclick="translateDE();">DE</button></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -49,15 +49,15 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" style="padding-top: 10rem;">
-    <div class="container d-flex align-items-center" style="height: 78vh;">
+  <div id="hero">
+    <div class="container d-flex align-items-center" style="height: 95vh;">
       <div class="table-cell">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-8">
-              <h1 class="hero-title mb-4">Hey There! <br> I'm Rina Reimer, a <span id="typed-animation" class="typed" data-typed-items="Student, blah, blah"></span><br>interested in algorithmic efficiency.</h1>
-              <p class="hero-subtitle">ACMS at <a href="https://acms.washington.edu/">UW ↗</a></p>
-              <p class="hero-subtitle">Research Assistant at <a href="https://wxml.math.washington.edu/">WXML ↗</a></p>
+              <h1 class="hero-title mb-4" lng-tag="hero-1"></h1>
+              <p class="hero-subtitle" lng-tag="current-school"></p>
+              <p class="hero-subtitle" lng-tag="current-job"></p>
             </div>
             <div class="col d-flex align-items-center">
               <img src="../img/memoji.png" class="img-fluid" onmouseover="this.src='../img/memoji-wink.png'" onmouseout="this.src='../img/memoji.png'" alt="Profile Image">
@@ -149,15 +149,14 @@
             <div class="col-sm-12">
               <div class="row align-items-center">
                 <div class="col-sm-6 col-md-5">
-                  <img src="../img/featured-project-1.jpeg" class="img-fluid" style="border-radius: 20px; border: #14110F solid 3px;">
+                  <img src="../img/featured-project-4.png" class="img-fluid">
                 </div>
                 <div class="col-sm-6 col-md-7">
                     <div class="title-box text-center" style="margin-bottom: 1rem;">
-                    <h3 class="title-a" lng-tag="proj4-title"></h3>
-                    <h3 class="subtitle-a" style="color: #9E8EB9">hackathon | app development | algorithms | java</h3>
-                  </div>
-
-                  <p class="s-description" lng-tag="proj4-desc"></p>
+                      <h3 class="title-a" lng-tag="proj4-title"></h3>
+                      <h3 class="subtitle-s" lng-tag="proj4-tags"></h3>
+                    </div>
+                     <p class="s-description" lng-tag="proj4-desc"></p>
                   <div class="row justify-content-center">
                     <div class="col-4">
                       <a href="https://github.com/rina-reimer/bit-connect" title="Bit Connect GitHub Repo" target="_blank" rel="noopener noreferrer">
@@ -183,7 +182,7 @@
                 <div class="col-sm-6 col-md-7">
                   <div class="title-box text-center" style="margin-bottom: 1rem;">
                     <h3 class="title-a" lng-tag="proj3-title"></h3>
-                    <h3 class="subtitle-a" style="color: #9E8EB9">machine learning | python</h3>
+                    <h3 class="subtitle-s" lng-tag="proj3-tags"></h3>
                   </div>
                   <p class="s-description" lng-tag="proj3-desc"></p>
                   <div class="row justify-content-center">
@@ -195,7 +194,7 @@
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-5">
-                  <img src="../img/featured-project-2.png" class="img-fluid" style="border-radius: 20px; border: #14110F solid 3px;">
+                  <img src="../img/featured-project-2.png" class="img-fluid">
                 </div>
               </div>
             </div>

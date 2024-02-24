@@ -13,13 +13,16 @@ CODE:
 * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
-   
+
+3D MODELS:
+https://previewed.app/
+
 INSPIRATION:
 
-   https://mirandacwong.com/
+https://mirandacwong.com/
 
-   https://www.apurvachinta.com/
+https://www.apurvachinta.com/
 
-   https://www.leah-lee.com/
-   
-   https://www.ayushwanjari.com/
+https://www.leah-lee.com/
+
+https://www.ayushwanjari.com/
