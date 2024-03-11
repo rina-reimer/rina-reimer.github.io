@@ -1128,7 +1128,11 @@ footer .copyright {
 }
 
 footer .credits {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+}
+
+footer .links {
+  margin-bottom: 20px;
 }
 
 footer .credits a {
