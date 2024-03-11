@@ -7,7 +7,7 @@
     "hero-1": "Hey There! <br> I'm Rina Reimer, a",
     "hero-2": "interested in algorithmic efficiency.",
     "current-school": "ACMS at <a href='https://acms.washington.edu/'>UW ↗</a>",
-    "current-job": "Research Assistant at <a href='https://wxml.math.washington.edu/'>WXML ↗></a>",
+    "current-job": "Research Assistant at <a href='https://wxml.math.washington.edu/'>WXML ↗</a>",
     "school": "School: ",
     "curr-school": "University of Washington",
     "grad-year": "Graduation Year: ",
@@ -70,5 +70,5 @@
     "xcirr1-grp": "<a href='https://www.byjusfutureschool.com/' title='BYJU's FutureSchool' target='_blank' rel='noopener noreferrer'>BYJU's FutureSchool</a>",
     "xcirr1-dates": "September 2020 - October 2022",
     "xcirr1-desc": "<li>Online individual Python training program based in India.</li><li>Mastered data cleaning/visualization and statistical representation techniques through hands-on data analysis projects with large data sets from various international sources.</li><li>Gained coding experience and deepened knowledge of machine learning and probability.</li>",
-    "footer-dec": "always looking for opportunities :)"
+    "footer-desc": "always looking for opportunities :)"
 }
