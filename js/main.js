@@ -5,6 +5,44 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+// Function to generate the GitHub contributions visualization
+function generateContributionsVisualization(data) {
+  // Extract the contribution data from the GraphQL response
+  const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+  // Prepare the data for the chart
+  const labels = weeks.map(week => {
+    const date = new Date(week.contributionDays[0].date);
+    return date.toLocaleString('default', { month: 'long' });
+  });
+  const dataPoints = weeks.map(week => week.contributionDays.reduce((total, day) => total + day.contributionCount, 0));
+  
+  // Create a canvas element for the chart
+  const canvas = document.getElementById('contributionsChart');
+  
+  // Create the chart using Chart.js
+  return new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Weekly Contribution Count',
+        data: dataPoints,
+        backgroundColor: '#5B5992',
+        borderColor: '#5B5992',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  }); 
+}
+
 (function() {
   "use strict";
 
@@ -176,48 +214,6 @@
   }
 
   /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
    * Preloader
    */
   let preloader = select('#preloader');
@@ -227,9 +223,48 @@
     });
   }
 
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
+  // Make the GraphQL query to fetch the contribution data
+  const query = `
+  query ContributionGraph {
+    user(login: "rina-reimer") {
+      contributionsCollection(
+        from: "${new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate()).toISOString()}"
+        to: "${new Date().toISOString()}"
+      ) {
+        contributionCalendar {
+          weeks {
+            contributionDays {
+              contributionCount
+              weekday
+              date
+            }
+          }
+        }
+      }
+    }
+  }
+  `;
+
+  window.addEventListener('load', () => {
+  // Make the GraphQL request
+  fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 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'
+    },
+    body: JSON.stringify({ query })
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Generate the chart
+    const chartCanvas = generateContributionsVisualization(data);
+    
+    // Display the chart on the HTML page
+    const chartContainer = document.getElementById('chartContainer');
+    chartContainer = chartCanvas.canvas;
+  })
+  .catch(error => console.error(error));
+  })
 
 })()
