@@ -9,6 +9,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/* colors */
 :root {
   --color-primary: #f4e5f3;
   --color-secondary: #edcfc0;
@@ -30,8 +32,6 @@ body .dark-mode {
   background-color: black;
   color: white;
 }
-
-
 
 h1,
 h2,
@@ -117,37 +117,6 @@ a:hover {
   }
 }
 
-.overlay-mf {
-  background-color: var(--color-background);
-}
-
-.overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.7;
-}
-
-.paralax-mf {
-  position: relative;
-  padding: 8rem 0;
-}
-
-.display-table {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-  /*padding-top: 26px;*/
-}
-
 .hover-image {
   background-image: url(../img/memoji1.png);
   background-size: cover;
@@ -159,6 +128,22 @@ a:hover {
 }
 
 /*--/ Sections /--*/
+.grid {
+  display: grid;
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns:30% 70%;
+}
+
+.content-sections {
+  width:95%;
+  height: 100vh;
+  display: grid;
+  background-size: cover;
+  padding-top: 90px;
+  overflow-y: scroll;
+}
+
 .sect-4 {
   padding: 4rem 0;
 }
@@ -226,7 +211,7 @@ a:hover {
 .title-box-2 {
   margin-bottom: 3rem;
 }
-
+/*
 .title-left {
   font-size: 2rem;
   position: relative;
@@ -240,7 +225,7 @@ a:hover {
   width: 100px;
   bottom: -12px;
 }
-
+*/
 /*------/ Box /------*/
 .box-pl2 {
   padding-left: 2rem;
@@ -248,12 +233,14 @@ a:hover {
 
 .box-shadow-full {
   padding: 3rem 1.25rem;
-  position: relative;
+  /*position: relative;*/
   background-color: var(--color-primary);
   margin-bottom: 3rem;
   z-index: 2;
   border-bottom: 3px solid var(--color-border);
   border-top: 3px solid var(--color-border);
+  border-left: 3px solid var(--color-border);
+  border-right: 3px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -326,13 +313,13 @@ a:hover {
 
 /*--/ Scrolltop s /--*/
 .scrolltop-mf {
-  position: relative;
+  /*position: relative;*/
   display: none;
 }
 
 .scrolltop-mf span {
   z-index: 999;
-  position: fixed;
+  /*position: fixed;*/
   width: 42px;
   height: 42px;
   background-color: var(--color-contrast);
@@ -792,25 +779,19 @@ a:hover {
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  height: 100vh;
-  position: relative;
+  width: 100%;
+  height: 100%;
   color: var(--color-text);
   padding-top: 10rem;
+  align-items: center;
+  flex-direction: column;
+
+  position: sticky;
+  top: 30px;
 }
 
 .hero .hero-content {
   text-align: left;
-  position: absolute;
-}
-
-.hero .overlay-itro {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
 }
 
 .hero .hero-title {
@@ -822,61 +803,20 @@ a:hover {
 
 @media (min-width: 768px) {
   .hero .hero-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 .hero .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 @media (min-width: 768px) {
   .hero .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
-
-.hero .text-slider-items {
-  display: none;
-}
-
-.hero-single {
-  height: 350px;
-}
-
-.hero-single .hero-content {
-  margin-top: 30px;
-}
-
-.hero-single .hero-title {
-  text-transform: uppercase;
-  font-size: 3rem;
-}
-
-@media (min-width: 768px) {
-  .hero-single .hero-title {
-    font-size: 3.5rem;
-  }
-}
-
-.hero-single .breadcrumb {
-  background-color: transparent;
-  color: var(--color-secondary);
-}
-
-.hero-single .breadcrumb .breadcrumb-item:before {
-  color: var(--color-primary);
-}
-
-.hero-single .breadcrumb .breadcrumb-item.active {
-  color: var(--color-primary);
-}
-
-.hero-single .breadcrumb a {
-  color: var(--color-white);
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -903,8 +843,98 @@ a:hover {
   .about-mf .box-pl2 {
     margin-top: 3rem;
     padding-left: 0rem;
-    border-bottom: 3px solid var(--color-border);
-    border-top: 3px solid var(--color-border);
+    border: 3px solid var(--color-border);
+  }
+}
+
+/* ------ Infinite Scrolling Logo Carousel -------------------
+creds to: https://codepen.io/abhikb/pen/yLgMvGw */
+.slider {
+  height: 96px;
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slider::before,
+.slider::after{
+  position:absolute;
+  background-image:linear-gradient(to right,var(--color-primary) 0%,rgba(255,255,255,0) 100%);
+  content:'';
+  height:100%;width:25%;
+  z-index:2;pointer-events:none;
+}
+.slider::before{
+  left:0;
+  top:0;
+}
+.slider::after{
+  right:0;
+  top:0;
+  transform:rotateZ(180deg);
+}
+.slide-track {
+  width: calc(150px * 5);
+  display: flex;
+  animation: scroll 30s linear infinite;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 96px;
+  height: 96px;
+
+  display: grid;
+  place-items: center;
+  transition:0.5s;
+  cursor:pointer;
+}
+.slide:hover {
+  transform: scale(0.8);
+}
+
+.slide-p {
+  display: none;
+  margin-bottom: -5px;
+  color: var(--color-border);
+}
+
+.slide:hover .slide-p {
+  display: block;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-track {
+    width: calc(80px * 20);
+  }
+
+  .slide-track2 {
+    width: calc(80px * 15);
+  }
+
+  .slide {
+    width: 80px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(calc(-80px * 10));
+    }
   }
 }
 
@@ -970,38 +1000,6 @@ a:hover {
   height: 100%;
 }
 
-/*--------------------------------------------------------------
-# Counter
---------------------------------------------------------------*/
-.counter-box {
-  color: var(--color-white);
-  text-align: center;
-}
-
-@media (min-width: 577px) {
-  .counter-box {
-    margin-bottom: 1.8rem;
-  }
-}
-
-.counter-ico {
-  margin-bottom: 1rem;
-}
-
-.counter-ico .ico-circle {
-  height: 60px;
-  width: 60px;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.5;
-  box-shadow: 0 0 0 10px var(--color-primary);
-}
-
-.counter-num .counter {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-
 /*------/ Sidebar /------*/
 .widget-sidebar .sidebar-title {
   font-size: 1.6rem;
@@ -1052,72 +1050,6 @@ a:hover {
 .widget-tags ul li a {
   color: var(--color-white);
 }
-
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------
-.resume {
-  font-family: "Space Grotesk", sans-serif;
-}
-
-.resume .resume-title {
-  padding-top: 10px; 
-  padding-bottom: 40px; 
-  color: var(--color-primary);
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--color-border);
-  text-align: center;
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--color-border);
-  margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: var(--color-overlay);
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--color-overlay);
-  border: 2px solid var(--color-background);
-  transform: translateX(-17.5px); 
-} */
 
 /*--------------------------------------------------------------
 # Footer

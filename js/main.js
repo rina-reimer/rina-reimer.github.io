@@ -251,7 +251,7 @@ function generateContributionsVisualization(data) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({ query })
   })
