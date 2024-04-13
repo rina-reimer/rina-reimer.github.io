@@ -1,440 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <!-- Viewport Settings -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <!-- Meta Information-->
+    <title>Rina Reimer</title>
+    <meta content="" name="Hey there! I'm Rina Reimer, and this is my personal website. 
+    It presents my basic information, academics, and work experience.">
+  
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Bootstrap CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  
+    <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="../css/index.css" rel="stylesheet">
+  
+    <!-- jQuery Source -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  </head>
 
-  <title>Rina Reimer</title>
-  <meta content="" name="Hey there! I'm Rina Reimer, and this is my personal website. 
-  It presents my basic information, academics, and work experience.">
-
-  <!-- Favicons -->
-  <link href="../img/favicon.png" rel="icon">
-  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-  <!-- Font Import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="../css/index.css" rel="stylesheet">
-
-  <!-- jQuery Source -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-</head>
-
-<body id="page-top" onload= "translate('en', 'lng-tag')">
+<!-- Shown HTML code -->
+<body id="page-top" onload="translate('en', 'lng-tag')">
+  
   <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container">
+      <div class="row">
+        <!-- Title -->
+        <div class="col" style="align-content: center;">
+          <h1 class="logo"><a href="index.html">Rina Reimer</a></h1>
+        </div>
 
-      <h1 class="logo"><a href="index.html">Rina Reimer</a></h1>
-      
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="html/about.html" lng-tag = "about"></a></li>
-          <li><a class="nav-link scrollto" href="html/projects.html" lng-tag = "projects"></a></li>
-          <li><a class="nav-link scrollto " href="../img/resume.pdf" target="_blank" rel="noopener noreferrer" lng-tag = "resume"></a></li>
-          <li><button class="trans-en" id="enTranslator" onclick="translateEN();">EN</button>
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link" href="pages/work.html" lng-tag = "projects">work</a></li>
+            <li><a class="nav-link" href="pages/about.html" lng-tag = "about">about</a></li>
+            <li><a class="nav-link" href="../img/resume.pdf" target="_blank" rel="noopener noreferrer" lng-tag = "resume">resume ↗</a></li>
+            <li><button class="trans-en" id="enTranslator" onclick="translateEN();">EN</button>
               <button class="trans-de" id="deTranslator" onclick="translateDE();">DE</button></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+      </div>
     </div>
   </header><!-- End Header -->
 
-<div class="grid">
-  <!-- ======= Hero Section ======= -->
-  <div class="hero">
-    <div class="container d-flex align-items-center">
-      <div class="table-cell">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-8">
-              <h1 class="hero-title" lng-tag="hero-1"></h1>
-              <h1 class="hero-title"><span id="typed-animation" class="typed" data-typed-items="Student, blah, blah"></span></h1>
-              <h1 class="hero-title" lng-tag="hero-2"></span></h1>
-              <p class="hero-subtitle" lng-tag="current-school"></p>
-              <p class="hero-subtitle" lng-tag="current-job"></p>
-            </div>
-            <!-- <div class="col d-flex align-items-center">
-              <img src="../img/memoji.png" class="img-fluid" onmouseover="this.src='../img/memoji-wink.png'" onmouseout="this.src='../img/memoji.png'" alt="Profile Image">
-            </div> -->
+  <!-- Title Section -->
+  <div title-section>
+    <aside class="sticky">
+      <div class="container">
+        <h1 class="hero-title" lng-tag="hero-1">Hey there! I'm Rina Reimer, a</h1>
+        <h1 class="hero-typed"><span id="typed-animation" class="typed" data-typed-items="Student, blah, blah"></span></h1>
+        <h1 class="hero-title" lng-tag="hero-2">interested in software development.</h1>
+        <div class="void-button">
+          <div class="row">
+            <i class="bi bi-geo-alt"></i>
+            <p>Seattle, WA</p>
           </div>
         </div>
+        <p class="hero-subtitle" lng-tag="current-job">Fullstack Developer at PeakMind</p>
       </div>
-    </div>
-  </div> <!-- End Hero Section -->
+    </aside>
+  </div> <!-- End Title Section -->
 
+  <!-- Scrolling Content -->
+  <section class="main-content">
+    <article>
 
-  <div class="content-sections">
-    <!-- ======= About Section ======= -->
-      <div class="box-shadow-full">
+      <!-- ======= Short About Section ======= -->
+      <div class="short-about">
         <div class="row">
+          <!-- Text Section -->
           <div class="col">
-            <div class="about-info">
-              <p><span class="title-s" lng-tag = "school"></span> <span lng-tag = "curr-school"></span></p>
-              <p><span class="title-s" lng-tag = "grad-year"></span> <span>2026</span></p>
-              <p><span class="title-s" lng-tag = "loc"></span> <span>Seattle, WA</span></p>
-              <p><span class="title-s" lng-tag = "major"></span> <span lng-tag = "major-title"></span></p>
-            <div class="more-info" style="align-items: center;">
-              <p class="lead" lng-tag = "con1"></p>
-            <div class="skill-mf">
-              <div class="title-box-2">
-                <br>
-                <h5 class="title-left" lng-tag = "toolbox"></h5>  
-              </div>
-              <!-- Infinite Carousels -->
-              <div>
-                <h3> Languages </h3>
-                <div class="slider">
-                  <div class="slide-track">
-                    <div class="slide">
-                      <p class="slide-p">Java</p>
-                      <img src="img/proglang/java.png" alt="Java" title="Java">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Python</p>
-                       <img src="img/proglang/python.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C</p>
-                       <img src="img/proglang/c.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C#</p>
-                       <img src="img/proglang/c-1.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">HTML</p>
-                       <img src="img/proglang/html.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">CSS</p>
-                       <img src="img/proglang/css.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Ruby</p>
-                       <img src="img/proglang/ruby.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">SQL</p>
-                       <img src="img/proglang/sql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Swift</p>
-                       <img src="img/proglang/swift.png"> 
-                    </div>
-                    <!-- Duplicates -->
-                    <div class="slide">
-                      <p class="slide-p">Java</p>
-                      <img src="img/proglang/java.png" alt="Java" title="Java">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Python</p>
-                       <img src="img/proglang/python.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C</p>
-                       <img src="img/proglang/c.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C#</p>
-                       <img src="img/proglang/c-1.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">HTML</p>
-                       <img src="img/proglang/html.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">CSS</p>
-                       <img src="img/proglang/css.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Ruby</p>
-                       <img src="img/proglang/ruby.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">SQL</p>
-                       <img src="img/proglang/sql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Swift</p>
-                       <img src="img/proglang/swift.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Java</p>
-                      <img src="img/proglang/java.png" alt="Java" title="Java">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Python</p>
-                       <img src="img/proglang/python.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C</p>
-                       <img src="img/proglang/c.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">C#</p>
-                       <img src="img/proglang/c-1.png"> 
-                    </div>
-                  </div>
-                </div>
-                <h3> Frameworks </h3>
-                <div class="slider">
-                  <div class="slide-track">
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                    <!-- Duplicates -->
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Bootstrap</p>
-                      <img src="img/frameworks/bootstrap.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Git</p>
-                       <img src="img/frameworks/git.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Kubernetes</p>
-                       <img src="img/frameworks/kubernetes.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">React</p>
-                       <img src="img/frameworks/react.png"> 
-                    </div>
-                  </div>
-                </div>
-                <h3> Systems </h3>
-                <div class="slider">
-                  <div class="slide-track">
-                    <div class="slide">
-                      <p class="slide-p">Figma</p>
-                      <img src="img/systems/figma.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">GitHub</p>
-                       <img src="img/systems/github.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">IntelliJ</p>
-                       <img src="img/systems/intellij.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Linux</p>
-                       <img src="img/systems/linux.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">MySQL</p>
-                       <img src="img/systems/mysql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">PostgreSQL</p>
-                       <img src="img/systems/postgresql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">VS Code</p>
-                       <img src="img/systems/vscode.png"> 
-                    </div>
-                    <!-- Duplicates -->
-                    <div class="slide">
-                      <p class="slide-p">Figma</p>
-                      <img src="img/systems/figma.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">GitHub</p>
-                       <img src="img/systems/github.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">IntelliJ</p>
-                       <img src="img/systems/intellij.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Linux</p>
-                       <img src="img/systems/linux.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">MySQL</p>
-                       <img src="img/systems/mysql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">PostgreSQL</p>
-                       <img src="img/systems/postgresql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">VS Code</p>
-                       <img src="img/systems/vscode.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Figma</p>
-                      <img src="img/systems/figma.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">GitHub</p>
-                       <img src="img/systems/github.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">IntelliJ</p>
-                       <img src="img/systems/intellij.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Linux</p>
-                       <img src="img/systems/linux.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">MySQL</p>
-                       <img src="img/systems/mysql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">PostgreSQL</p>
-                       <img src="img/systems/postgresql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">VS Code</p>
-                       <img src="img/systems/vscode.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Figma</p>
-                      <img src="img/systems/figma.png">
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">GitHub</p>
-                       <img src="img/systems/github.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">IntelliJ</p>
-                       <img src="img/systems/intellij.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">Linux</p>
-                       <img src="img/systems/linux.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">MySQL</p>
-                       <img src="img/systems/mysql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">PostgreSQL</p>
-                       <img src="img/systems/postgresql.png"> 
-                    </div>
-                    <div class="slide">
-                      <p class="slide-p">VS Code</p>
-                       <img src="img/systems/vscode.png"> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- End About Section -->
+            <p><span class="title-a" lng-tag = "school"></span> <span lng-tag = "curr-school"></span></p>
+            <p><span class="title-a" lng-tag = "grad-year"></span> <span>2026</span></p>
+            <p><span class="title-a" lng-tag = "loc"></span> <span>Seattle, WA</span></p>
+            <p><span class="title-a" lng-tag = "major"></span> <span lng-tag = "major-title"></span></p>
+            <p><span class="title-a" lng-tag = "abt1"></span></p>
+          </div><!-- End Text Section -->
 
-    <!-- ======= Featured Projects Section ======= -->
+          <!-- Tech Stack Section-->
+          <div class="col">
+            <h1 lng-tag="toolbox">My Tech Stack</h1>
+            <div class="container">
+              <div class="draggable">
+                <img draggable="false" src="img/proglang/python.png" >
+              </div>
+              <div class="draggable">
+                <img draggable="false" src="img/proglang/swift.png">
+              </div>
+              <div class="draggable">
+                <img draggable="false" src="img/frameworks/firebase.png">
+              </div>
+              <div class="draggable">
+                <img draggable="false" src="img/proglang/sql.png">
+              </div>
+            </div>
+          </div> <!-- End Tech Stack Section-->
+        </div>
+
+      </div>
+
+      <!-- ======= Featured Projects Section ======= -->
+      <!-- Title Section -->
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col">
             <div class="title-box text-center">
-              <h3 class="title-a" lng-tag = "projects"></h3>
+              <h2 class="title-p" lng-tag = "projects"></h2>
               <div class="line-mf"></div>
             </div>
           </div>
-        </div>
+        </div> <!-- End Title Section -->
         <!-- ==== PROJECT 1 ==== -->
         <div class="row">
-          <div class="service-box">
+          <div class="project-box">
             <div class="col-md-20">
               <div class="row align-items-center">
                 <div class="col-md-8">
-                  <div class="title-box text-center" style="margin-bottom: 1rem;">
-                    <h3 class="title-a" lng-tag="proj5-title"></h3>
-                    <h3 class="subtitle-s" lng-tag="proj5-tags"></h3>
+                  <div class="title-box text-center" style="padding-bottom: 0;">
+                    <h3 class="title-p" lng-tag="proj5-title"></h3>
+                    <h3 class="subtitle-p" lng-tag="proj5-tags"></h3>
                   </div>
-                  <p class="s-description" lng-tag="proj5-desc"></p>
+                  <p class="desc-p" lng-tag="proj5-desc"></p>
                   <div class="row justify-content-center">
                     <div class="col-4">
                       <a href="https://github.com/rahulrao6/PeakMind" title="PeakMind GitHub Repo" target="_blank" rel="noopener noreferrer">
@@ -457,18 +161,18 @@
         </div>
         <!-- ==== PROJECT 2 ==== -->
         <div class="row">
-          <div class="service-box">
+          <div class="project-box">
             <div class="col-sm-12">
               <div class="row align-items-center">
                 <div class="col-sm-6 col-md-5">
                   <img src="../img/featured-project-4.png" class="img-fluid">
                 </div>
                 <div class="col-sm-6 col-md-7">
-                    <div class="title-box text-center" style="margin-bottom: 1rem;">
-                      <h3 class="title-a" lng-tag="proj4-title"></h3>
-                      <h3 class="subtitle-s" lng-tag="proj4-tags"></h3>
+                    <div class="title-box text-center" style="padding-bottom: 0;">
+                      <h3 class="title-p" lng-tag="proj4-title"></h3>
+                      <h3 class="subtitle-p" lng-tag="proj4-tags"></h3>
                     </div>
-                     <p class="s-description" lng-tag="proj4-desc"></p>
+                     <p class="desc-p" lng-tag="proj4-desc"></p>
                   <div class="row justify-content-center">
                     <div class="col-4">
                       <a href="https://github.com/rina-reimer/bit-connect" title="Bit Connect GitHub Repo" target="_blank" rel="noopener noreferrer">
@@ -486,85 +190,155 @@
             </div>
           </div>
         </div>
-      </div>
-    <!-- End Featured Projects Section -->
+      </div><!-- End Featured Projects Section -->
 
-    <!-- ======= Academics Section ======= -->
+      <!-- ======= Academics Section ======= -->
       <div class="container">
+        <!-- Title Section -->
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a" lng-tag = "academics"></h3>
+              <h2 class="title-p" lng-tag = "academics"></h2>
               <div class="line-mf"></div>
             </div>
           </div>
-        </div>
+        </div> <!-- End Title Section -->
         <div class="row">
-          <div class="col-md-4">
-            <a class="services-a" href="https://courses.cs.washington.edu/courses/cse413/" title = "ENGL 288 Course Website" target="_blank" rel="noopener noreferrer">
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag = "cse413-title"></h2>
-                  <p class="s-description text-center" lng-tag = "cse413-desc"></p>
+<!-- =============== CSE 414 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://courses.cs.washington.edu/courses/cse414/" title = "CSE 414 Course Website" target="_blank" rel="noopener noreferrer">
+              <div class="project-box">
+                <h2 class="title-p" lng-tag = "cse414-title"></h2>
+                <div class="row justify-content-center">
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/proglang/sql.png"></div>
+                    <span class="tooltiptext">
+                      <p>SQL</p>
+                    </span>
+                  </div>
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/other/sqlserver.png"></div>
+                    <span class="tooltiptext">
+                      <p>SQL Server</p>
+                    </span>
+                  </div>
+                </div>
+                <p class="desc-p text-center" lng-tag = "cse414-desc"></p>
+              </div>
+            </a>
+          </div>
+<!-- =============== CSE 413 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://courses.cs.washington.edu/courses/cse413/" title = "CSE 413 Course Website" target="_blank" rel="noopener noreferrer">
+              <div class="project-box">
+                <h2 class="title-p" lng-tag = "cse413-title"></h2>
+                <div class="row justify-content-center">
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/proglang/ruby.png"></div>
+                    <span class="tooltiptext">
+                      <p>Ruby</p>
+                    </span>
+                  </div>
+                </div>
+                <p class="desc-p text-center" lng-tag = "cse413-desc"></p>
+              </div>
+            </a>
+          </div>
+<!-- =============== CSE 373 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://courses.cs.washington.edu/courses/cse373/" title="CSE 373 Course Website" target="_blank" rel="noopener noreferrer" >
+              <div class="project-box">
+                <h2 class="title-p" lng-tag="cse373-title"></h2>
+                <div class="row justify-content-center">
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/proglang/java.png"></div>
+                    <span class="tooltiptext">
+                      <p>Java</p>
+                    </span>
+                  </div>
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/frameworks/git.png"></div>
+                    <span class="tooltiptext">
+                      <p>Git</p>
+                    </span>
+                  </div>
+                  <div class="tooltip">
+                    <div class="icon-p"><img src="img/other/intellij.png"></div>
+                    <span class="tooltiptext">
+                      <p>IntelliJ IDEA</p>
+                    </span>
+                  </div>
+                </div>
+                <p class="desc-p text-center" lng-tag="cse373-desc"></p>
+              </div>
+            </a>
+          </div>
+<!-- =============== CSE 374 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://courses.cs.washington.edu/courses/cse374/" title = "CSE 374 Course Website" target="_blank" rel="noopener noreferrer">
+              <div class="project-box">
+                <div class="project-content">
+                  <h2 class="title-p" lng-tag = "cse374-title"></h2>
+                  <div class="row justify-content-center">
+                    <div class="tooltip">
+                      <div class="icon-p"><img src="img/proglang/c.png"></div>
+                      <span class="tooltiptext">
+                        <p>C</p>
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <div class="icon-p"><img src="img/proglang/c-1.png"></div>
+                      <span class="tooltiptext">
+                        <p>C++</p>
+                      </span>
+                    </div>
+                    <div class="tooltip">
+                      <div class="icon-p"><img src="img/other/linux.png"></div>
+                      <span class="tooltiptext">
+                        <p>Linux</p>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="desc-p text-center" lng-tag = "cse374-desc"></p>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-md-4">
-            <a class="services-a" href="https://courses.cs.washington.edu/courses/cse373/" title="CSE 373 Course Website" target="_blank" rel="noopener noreferrer" >
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag="cse373-title"></h2>
-                  <p class="s-description text-center" lng-tag="cse373-desc"></p>
+<!-- =============== AMATH 352 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://amath.washington.edu/courses/2023/spring/amath/352/b" title = "AMATH 352 Course Website" target="_blank" rel="noopener noreferrer">
+              <div class="project-box">
+                <div class="project-content">
+                  <h2 class="title-p" lng-tag = "amath352-title"></h2>
+                  <div class="row justify-content-center">
+                    <div class="tooltip">
+                      <div class="icon-p"><img src="img/proglang/python.png"></div>
+                      <span class="tooltiptext">
+                        <p>Python</p>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="desc-p text-center" lng-tag = "amath352-desc"></p>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-md-4">
-            <a class="services-a" href="https://courses.cs.washington.edu/courses/cse374/" title = "CSE 374 Course Website" target="_blank" rel="noopener noreferrer">
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag = "cse374-title"></h2>
-                  <p class="s-description text-center" lng-tag = "cse374-desc"></p>
+<!-- =============== STAT 390 =============== -->
+          <div class="col">
+            <a class="projects-a" href="https://stat.uw.edu/academics/course-catalog/stat-390" title = "STAT 390 Course Website" target="_blank" rel="noopener noreferrer">
+              <div class="project-box">
+                <div class="project-content">
+                  <h2 class="title-p" lng-tag = "stat390-title"></h2>
+                  <p class="desc-p text-center" lng-tag="stat390-desc"></p>
                 </div>
               </div>
             </a>
-          </div>
-          <div class="col-md-4">
-            <a class="services-a" href="https://amath.washington.edu/courses/2023/spring/amath/352/b" title = "AMATH 352 Course Website" target="_blank" rel="noopener noreferrer">
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag = "amath352-title"></h2>
-                  <p class="s-description text-center" lng-tag = "amath352-desc"></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="services-a" href="https://stat.uw.edu/academics/course-catalog/stat-390" title = "STAT 390 Course Website" target="_blank" rel="noopener noreferrer">
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag = "stat390-title"></h2>
-                  <p class="s-description text-center" lng-tag="stat390-desc"></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a class="services-a" href="https://courses.cs.washington.edu/courses/cse123/" title = "CSE 123 Course Website" target="_blank" rel="noopener noreferrer">
-              <div class="service-box">
-                <div class="service-content">
-                  <h2 class="s-title" lng-tag = "cse123-title"></h2>
-                  <p class="s-description text-center" lng-tag="cse123-desc"></p>
-                </div>
-              </div>
-            </a>
-          </div>     
+          </div>    
         </div>
-      </div>
-    <!-- End Academics Section --> 
-  </div> <!-- End content sections div -->
-</div>
+      </div><!-- End Academics Section --> 
+  
+    </article>
+  </section> <!-- End Scrolling Content -->
 
   <!-- ======= Footer ======= -->
   <footer>
@@ -572,76 +346,65 @@
       <div class="row">
         <div class="col-md-6 col-md-6">
           <div class="copyright-box">
-            <p class="copyright">&copy; <strong>DevFolio</strong></p>
-            <div class="credits">
-              <a href="https://bootstrapmade.com/" title="website template credit to BootstrapMade" target="_blank" rel="noopener noreferrer">BootstrapMade</a>
-              <div class="socials">
-                <div class="row align-items-center">
-                  <a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
-                  <a href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                  <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                </div>
-              </div>
-            </div>
-          </div>
+            <p class="copyright">&copy; <strong>Rina Reimer</strong></p>
         </div>
+      </div>
         <div class="col-md-6 col-md-6">
           <div class="links">
             <p lng-tag="footer-desc"></p>
             <div class="row justify-items-center">
-              <div class="col-md-6">
-                <a class="services-a" href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><button class="button">GitHub</button></a>
+              <div class="socials">
+                <div class="row align-items-center">
+                  <a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
+                  <a href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span class="ico-square"><i class="bi bi-linkedin"></i></span></a></li>
+                  <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                </div>
               </div>
-              <div class="col-md-6">
-                <a class="services-a" href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><button class="button">LinkedIn</button></a>
-              </div>
+            
             </div>
           </div>
         </div>
       </div>
     </div>
   </footer><!-- End  Footer -->
-    
-    <!-- Vendor JS Files -->
+
+  <!-- Vendor JS Files -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
   
-    <!-- Template Main JS File -->
-    <script src="../js/main.js"></script>
+  <!-- Main JS File -->
+  <script src="../js/main.js"></script>
 
-    <!-- Translation Files -->
-    <script src="../js/translate.js"></script>
-    <script src="../js/index.js"></script>
+  <!-- Typed Setup -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    let typed = new Typed('#typed-animation', {
+      strings: ['Student', 'Developer', 'Team Player'],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
 
-    <!-- Typed Setup -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-      let typed = new Typed('#typed-animation', {
-        strings: ['Student', 'Math Tutor', 'Developer', 'Team Player'],
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000
-      });
+    function translateEN() {
+      typed.strings = ['Student', 'Developer', 'Team Player']
+    }
 
-      function translateEN() {
-        typed.strings = ['Student', 'Developer', 'Team Player']
-      }
+    function translateDE() {
+      typed.strings = ['Studentin', 'Entwicklerin', 'Teamplayer']
+    }
+    /* Credits in css*/
+    $('.imagehover').mousemove(function(e){
+      $(this).find('project-box').addClass('visible');
+      $(this).find('project-box').css({
+          left:e.pageX, top:e.pageY
+        });
+    }).mouseleave(function(){
+      $(this).find('project-box').removeClass('visible');
+    });
+  </script>
 
-      function translateDE() {
-        typed.strings = ['Studentin', 'Entwicklerin', 'Teamplayer']
-      }
-      /* Credits in css*/
-      $('.imagehover').mousemove(function(e){
-        $(this).find('service-box').addClass('visible');
-        $(this).find('service-box').css({
-            left:e.pageX, top:e.pageY
-          });
-      }).mouseleave(function(){
-        $(this).find('service-box').removeClass('visible');
-      });
-    </script>
 </body>
 
 </html>

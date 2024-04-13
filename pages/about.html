@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Viewport Settings -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Meta Information-->
+  <title>Rina Reimer</title>
+  <meta content="" name="Hey there! I'm Rina Reimer, and this is my personal website. 
+  It presents my basic information, academics, and work experience.">
+
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Font Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../css/index.css" rel="stylesheet">
+
+  <!-- jQuery Source -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<!-- Shown HTML code -->
+<body id="page-top" onload="translate('en', 'lng-tag')">
+  
+  <header id="header" class="fixed-top">
+    <div class="container">
+      <div class="row">
+        <!-- Title -->
+        <div class="col" style="align-content: center;">
+          <h1 class="logo"><a href="../index.html">Rina Reimer</a></h1>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link" href="work.html" lng-tag = "projects">work</a></li>
+            <li><a class="nav-link" href="about.html" lng-tag = "about">about</a></li>
+            <li><a class="nav-link" href="../img/resume.pdf" target="_blank" rel="noopener noreferrer" lng-tag = "resume">resume ↗</a></li>
+            <li><button class="trans-en" id="enTranslator" onclick="translateEN();">EN</button>
+              <button class="trans-de" id="deTranslator" onclick="translateDE();">DE</button></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ===== Hero Section ==== -->
+  <div class="table-cell" style="align-items: center;">
+    <div class="container" style="padding-top: 10rem; padding-bottom: 7rem;">
+      <div class="container" style="height: fit-content;">
+        <div class="row align-items-center">
+          <div class="col-8">
+            <h1 class="hero-title mb-4" lng-tag="greeting"></h1>
+            <p class="hero-content" lng-tag="abt2"></p>
+          </div>
+          <div class="col">
+            <img src="../../img/profile.jpeg" class="img-fluid" style="border-radius: 20px; border: #14110F solid 3px;">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div><!-- End Hero Section -->
+
+  <!-- ===== Contact Section ==== -->
+  <div class="contact-box">
+    <div class="row">
+      <div class="col text-center">
+        <a class="subtitle-c" href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><h1 class="subtitle-c">GITHUB ↗</h1></a>
+      </div>
+      <div class="col text-center">
+        <a class="subtitle-c" href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><h1 class="subtitle-c">LINKEDIN ↗</h1></a>
+      </div>
+      <div class="col text-center">
+        <a class="subtitle-c" href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><h1 class="subtitle-c">EMAIL ↗</h1></a>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact Section -->
+
+  <div class="container">
+    <div class="title-box">
+      <h2 class="title" lng-tag = "toolbox"></h2> 
+    </div>
+    <div class="row align-items-center">
+       
+      <!-- Infinite Carousels -->
+        <h3 lng-tag="languages"></h3>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <p class="slide-p">Java</p>
+              <img src="../img/proglang/java.png" alt="Java" title="Java">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Python</p>
+               <img src="../img/proglang/python.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C</p>
+               <img src="../img/proglang/c.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C++</p>
+               <img src="../img/proglang/c-1.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">HTML</p>
+               <img src="../img/proglang/html.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">CSS</p>
+               <img src="../img/proglang/css.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">JavaScript</p>
+               <img src="../img/proglang/javascript.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Ruby</p>
+               <img src="../img/proglang/ruby.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL</p>
+               <img src="../img/proglang/sql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Swift</p>
+               <img src="../img/proglang/swift.png"> 
+            </div>
+            <!-- Duplicates -->
+            <div class="slide">
+              <p class="slide-p">Java</p>
+              <img src="../img/proglang/java.png" alt="Java" title="Java">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Python</p>
+               <img src="../img/proglang/python.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C</p>
+               <img src="../img/proglang/c.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C++</p>
+               <img src="../img/proglang/c-1.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">HTML</p>
+               <img src="../img/proglang/html.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">CSS</p>
+               <img src="../img/proglang/css.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">JavaScript</p>
+               <img src="../img/proglang/javascript.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Ruby</p>
+               <img src="../img/proglang/ruby.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL</p>
+               <img src="../img/proglang/sql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Swift</p>
+               <img src="../img/proglang/swift.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Java</p>
+              <img src="../img/proglang/java.png" alt="Java" title="Java">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Python</p>
+               <img src="../img/proglang/python.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C</p>
+               <img src="../img/proglang/c.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">C++</p>
+               <img src="../img/proglang/c-1.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">JavaScript</p>
+               <img src="../img/proglang/javascript.png"> 
+            </div>
+          </div>
+        </div>
+        <h3 lng-tag="frameworks"></h3>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+            <!-- Duplicates -->
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Bootstrap</p>
+              <img src="../img/frameworks/bootstrap.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">Git</p>
+               <img src="../img/frameworks/git.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Kubernetes</p>
+               <img src="../img/frameworks/kubernetes.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Pandas</p>
+               <img src="../img/frameworks/pandas.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">React</p>
+               <img src="../img/frameworks/react.png"> 
+            </div>
+          </div>
+        </div>
+        <h3 lng-tag="etc"></h3>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <p class="slide-p">Figma</p>
+              <img src="../img/other/figma.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">GitHub</p>
+               <img src="../img/other/github.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">IntelliJ</p>
+               <img src="../img/other/intellij.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Linux</p>
+               <img src="../img/other/linux.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">MySQL</p>
+               <img src="../img/other/mysql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">PostgreSQL</p>
+               <img src="../img/other/postgresql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL Server</p>
+               <img src="../img/other/sqlserver.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">VS Code</p>
+               <img src="../img/other/vscode.png"> 
+            </div>
+            <!-- Duplicates -->
+            <div class="slide">
+              <p class="slide-p">Figma</p>
+              <img src="../img/other/figma.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">GitHub</p>
+               <img src="../img/other/github.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">IntelliJ</p>
+               <img src="../img/other/intellij.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Linux</p>
+               <img src="../img/other/linux.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">MySQL</p>
+               <img src="../img/other/mysql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">PostgreSQL</p>
+               <img src="../img/other/postgresql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL Server</p>
+               <img src="../img/other/sqlserver.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">VS Code</p>
+               <img src="../img/other/vscode.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Figma</p>
+              <img src="../img/other/figma.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">GitHub</p>
+               <img src="../img/other/github.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">IntelliJ</p>
+               <img src="../img/other/intellij.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Linux</p>
+               <img src="../img/other/linux.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">MySQL</p>
+               <img src="../img/other/mysql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">PostgreSQL</p>
+               <img src="../img/other/postgresql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL Server</p>
+               <img src="../img/other/sqlserver.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">VS Code</p>
+               <img src="../img/other/vscode.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Figma</p>
+              <img src="../img/other/figma.png">
+            </div>
+            <div class="slide">
+              <p class="slide-p">GitHub</p>
+               <img src="../img/other/github.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">IntelliJ</p>
+               <img src="../img/other/intellij.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">Linux</p>
+               <img src="../img/other/linux.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">MySQL</p>
+               <img src="../img/other/mysql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">PostgreSQL</p>
+               <img src="../img/other/postgresql.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">SQL Server</p>
+               <img src="../img/other/sqlserver.png"> 
+            </div>
+            <div class="slide">
+              <p class="slide-p">VS Code</p>
+               <img src="../img/other/vscode.png"> 
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+ <!--
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="service-box">
+          <h1>Areas of Expertise</h1>
+          <li>something</li>
+          <li>something</li>
+          <li>something</li>
+        </div>  
+      </div>
+      <div class="col">
+        <div class="service-box">
+          <h1>Areas of Expertise</h1>
+          <li>something</li>
+          <li>something</li>
+          <li>something</li>
+        </div>  
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-center">
+            
+      </div>
+    </div>-->
+
+  <!-- Testimonial Slider -->
+  <!--
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      <div class="project-box">
+        <div id="carouselExemple" class="carousel slide" data-ride="carousel" data-interval="5000">
+          <ol class="carousel-indicators" style="color: black;">
+            <li data-target="#carouselExemple" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExemple" data-slide-to="1"></li>
+            <li data-target="#carouselExemple" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+  
+              <div class="carousel-item active">
+                  <div class="box">
+                    <h1>Testimonial 1</h1>
+                    <p>something something</p>
+                  </div>
+              </div>
+  
+              <div class="carousel-item">
+                  <div class="box">
+                    <h1>Testimonial 2</h1>
+                    <p>something something</p>
+                  </div>
+              </div>
+  
+          </div>
+        </div>
+          <a href="#carouselExemple" class="carousel-control-prev" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="ture"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a href="#carouselExemple" class="carousel-control-next" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-6">
+          <div class="copyright-box">
+            <p class="copyright">&copy; <strong>Rina Reimer</strong></p>
+        </div>
+      </div>
+        <div class="col-md-6 col-md-6">
+          <div class="links">
+            <p lng-tag="footer-desc"></p>
+            <div class="row justify-items-center">
+              <div class="socials">
+                <div class="row align-items-center">
+                  <a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
+                  <a href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span class="ico-square"><i class="bi bi-linkedin"></i></span></a></li>
+                  <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+  <!-- Template Main JS File -->
+  <script src="../js/main.js"></script>
+
+  <script>
+    $('.carousel').carousel({
+        pause: "null"
+    })
+  </script>
+</body>
+</html>

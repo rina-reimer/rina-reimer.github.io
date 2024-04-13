@@ -1,48 +1,183 @@
-/**
-* Template Name: DevFolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* ----------------------------------------------
+Sticky Sidebar
+creds: https://codepen.io/cheryllaird/pen/nQZEvx
+---------------------------------------------- */
+var stickySidebar = $('.sticky');
 
-// Function to generate the GitHub contributions visualization
-function generateContributionsVisualization(data) {
-  // Extract the contribution data from the GraphQL response
-  const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
-  // Prepare the data for the chart
-  const labels = weeks.map(week => {
-    const date = new Date(week.contributionDays[0].date);
-    return date.toLocaleString('default', { month: 'long' });
-  });
-  const dataPoints = weeks.map(week => week.contributionDays.reduce((total, day) => total + day.contributionCount, 0));
-  
-  // Create a canvas element for the chart
-  const canvas = document.getElementById('contributionsChart');
-  
-  // Create the chart using Chart.js
-  return new Chart(canvas, {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: 'Weekly Contribution Count',
-        data: dataPoints,
-        backgroundColor: '#5B5992',
-        borderColor: '#5B5992',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  }); 
+if (stickySidebar.length > 0) {	
+  var stickyHeight = stickySidebar.height(),
+      sidebarTop = stickySidebar.offset().top;
 }
 
+// on scroll move the sidebar
+$(window).scroll(function () {
+  if (stickySidebar.length > 0) {	
+    var scrollTop = $(window).scrollTop();
+            
+    if (sidebarTop < scrollTop) {
+      stickySidebar.css('top', scrollTop - sidebarTop);
+
+      // stop the sticky sidebar at the footer to avoid overlapping
+      var sidebarBottom = stickySidebar.offset().top + stickyHeight,
+          stickyStop = $('.main-content').offset().top + $('.main-content').height();
+      if (stickyStop < sidebarBottom) {
+        var stopPosition = $('.main-content').height() - stickyHeight;
+        stickySidebar.css('top', stopPosition);
+      }
+    }
+    else {
+      stickySidebar.css('top', '0');
+    } 
+  }
+});
+
+$(window).resize(function () {
+  if (stickySidebar.length > 0) {	
+    stickyHeight = stickySidebar.height();
+  }
+});
+
+/* ----------------------------------------------
+Translation Feature
+---------------------------------------------- */
+
+class Translate {
+	constructor(attribute, lng) {
+		// initialization
+		this.attribute = attribute;
+		this.lng = lng;
+	}
+	// translate 
+	process() {
+		var attr = this.attribute;
+		var xrhFile = new XMLHttpRequest();
+		// load content data 
+		xrhFile.open("GET", "https://rina-reimer.github.io/lng/" + this.lng + ".json", false);
+		xrhFile.onreadystatechange = function () {
+			if (xrhFile.readyState === 4) {
+				if (xrhFile.status === 200 || xrhFile.status == 0) {
+					var LngObject = JSON.parse(xrhFile.responseText);
+					var allDom = document.getElementsByTagName("*");
+					for (var i = 0; i < allDom.length; i++) {
+						var elem = allDom[i];
+						var key = elem.getAttribute(attr);
+						if (key != null) { 
+							elem.innerHTML = LngObject[key];
+						}
+					}
+
+				}
+			}
+		};
+		xrhFile.send();
+	};
+}
+
+// This function will be called when user click changing language
+function translate(lng, tagAttr){
+  var translate = new Translate(tagAttr, lng);
+  translate.process();
+  if(lng == 'en'){
+    $("#enTranslator").css('color', '#E97A60');
+    $("#deTranslator").css('color', '#000');
+  } 
+  if(lng == 'de'){
+    $("#deTranslator").css('color', '#E97A60');
+    $("#enTranslator").css('color', '#000');
+  }
+}
+
+$(document).ready(function(){
+  // This is id of HTML element (English) with attribute lng-tag
+  $("#enTranslator").click(function(){
+  translate('en', 'lng-tag');
+  })
+  // This is id of HTML element (Deutsch) with attribute lng-tag
+  $("#deTranslator").click(function(){
+  translate('de', 'lng-tag');
+  });
+});
+
+/* ----------------------------------------------
+Draggable Content
+creds: https://www.redblobgames.com/making-of/draggable/
+---------------------------------------------- */
+
+const draggableElements = document.querySelectorAll(".draggable");
+draggableElements.forEach((el, index) => {
+  let state = {
+    eventToCoordinates(event) { return {x: event.clientX, y: event.clientY}; },
+    dragging: false,
+    _pos: {x: 0, y: 0},
+    get pos() { return this._pos },
+    set pos(p) {
+        const container = el.parentNode.getBoundingClientRect();
+        const bounds = el.getBoundingClientRect();
+        this._pos = {
+            x: clamp(p.x, -20, container.width - bounds.width - 10),
+            y: clamp(p.y, index * -96, container.height - bounds.height - 96*index)
+        };
+        el.style.transform = `translate(${this._pos.x}px,${this._pos.y}px)`;
+    },
+  }
+  makeDraggable(state, el, index);
+});
+
+function clamp(x, lo, hi) { return x < lo ? lo : x > hi ? hi : x; }
+
+function makeDraggable(state, el, index) {
+    function start(event) {
+        if (event.button !== 0) return; // left button only
+        let {x, y} = state.eventToCoordinates(event);
+        state.dragging = {dx: state.pos.x - x, dy: state.pos.y - y};
+        el.classList.add('dragging');
+        el.setPointerCapture(event.pointerId);
+    }
+
+    function end(_event, index) {
+        
+        /*
+          const container = el.parentNode.getBoundingClientRect();
+          const bounds = el.getBoundingClientRect();
+          const bottomPosition = container.height - bounds.height - 96 * index;
+          const distance = bottomPosition - state.pos.y;
+          const duration = 50000; // adjust the duration as needed
+          const startTime = performance.now() + 10;
+          
+          function animate(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const newPosition = state.pos.y + distance * progress;
+            state.pos = { x: state.pos.x, y: newPosition };
+            
+            if (progress < 2) {
+              requestAnimationFrame(animate);
+            }
+          }
+          
+          requestAnimationFrame(animate);
+        */
+          state.dragging = null;
+          el.classList.remove('dragging');
+    }
+
+    function move(event) {
+        if (!state.dragging) { return; }
+        let {x, y} = state.eventToCoordinates(event);
+        state.pos = {x: x + state.dragging.dx, y: y + state.dragging.dy};
+    }
+
+    el.addEventListener('pointerdown', start);
+    el.addEventListener('pointerup', end);
+    // el.addEventListener('pointercancel', end);
+    el.addEventListener('pointermove', move)
+    el.addEventListener('touchstart', (e) => e.preventDefault());
+}
+
+/* ----------------------------------------------
+General Functionality 
+creds: BootstrapMade
+---------------------------------------------- */
 (function() {
   "use strict";
 
@@ -198,22 +333,6 @@ function generateContributionsVisualization(data) {
   });
 
   /**
-   * Intro type effect
-   *
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-  /**
    * Preloader
    */
   let preloader = select('#preloader');
@@ -222,49 +341,5 @@ function generateContributionsVisualization(data) {
       preloader.remove()
     });
   }
-
-  // Make the GraphQL query to fetch the contribution data
-  const query = `
-  query ContributionGraph {
-    user(login: "rina-reimer") {
-      contributionsCollection(
-        from: "${new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate()).toISOString()}"
-        to: "${new Date().toISOString()}"
-      ) {
-        contributionCalendar {
-          weeks {
-            contributionDays {
-              contributionCount
-              weekday
-              date
-            }
-          }
-        }
-      }
-    }
-  }
-  `;
-
-  window.addEventListener('load', () => {
-  // Make the GraphQL request
-  fetch('https://api.github.com/graphql', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
-    },
-    body: JSON.stringify({ query })
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Generate the chart
-    const chartCanvas = generateContributionsVisualization(data);
-    
-    // Display the chart on the HTML page
-    const chartContainer = document.getElementById('chartContainer');
-    chartContainer = chartCanvas.canvas;
-  })
-  .catch(error => console.error(error));
-  })
 
 })()

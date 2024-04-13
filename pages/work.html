@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Viewport Settings -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Meta Information-->
+  <title>Rina Reimer</title>
+  <meta content="" name="Hey there! I'm Rina Reimer, and this is my personal website. 
+  It presents my basic information, academics, and work experience.">
+
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Font Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../css/index.css" rel="stylesheet">
+
+  <!-- jQuery Source -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<!-- Shown HTML code -->
+<body id="page-top" onload="translate('en', 'lng-tag')">
+  
+  <header id="header" class="fixed-top">
+    <div class="container">
+      <div class="row">
+        <!-- Title -->
+        <div class="col" style="align-content: center;">
+          <h1 class="logo"><a href="../index.html">Rina Reimer</a></h1>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link" href="work.html" lng-tag = "projects">work</a></li>
+            <li><a class="nav-link" href="about.html" lng-tag = "about">about</a></li>
+            <li><a class="nav-link" href="../img/resume.pdf" target="_blank" rel="noopener noreferrer" lng-tag = "resume">resume ↗</a></li>
+            <li><button class="trans-en" id="enTranslator" onclick="translateEN();">EN</button>
+              <button class="trans-de" id="deTranslator" onclick="translateDE();">DE</button></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Hero Secion - introducting the page -->
+  <div id="hero" style="padding-top: 10rem;">
+    <div class="container d-flex align-items-center" style="height: 50vh; border-bottom: #14110F solid 3px;">
+      <div class="row">
+        <div class="hero-title">
+          <h1 lng-tag="projects-title"></h1>
+        </div>
+        <div class="tooltip">
+          <i class="bi bi-info-square-fill"></i>
+          <span class="tooltiptext">
+            <div class="row">
+              <div class="col">
+                <div class="blinking-light-inactive"><i class="bi bi-circle-fill" style="color: rgb(89, 226, 89);"></i></div>
+                <p>Active</p>
+              </div>
+              <div class="col">
+                <div class="blinking-light-inactive"><i class="bi bi-circle-fill" style="color: rgb(227, 82, 82);"></i></div>
+                <p>Complete</p>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ======= Work Section ======= -->
+  <div class="container">
+    <!-- Row 1 -->
+    <div class="row">
+<!-- ============================= Saintsblade ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-6" class="check-input-6" />
+          <label for="check-input-6" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-6.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj6-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light active"><i class="bi bi-circle-fill h10"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj6-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/java.png">
+                            <span class="tooltiptext">
+                              <p>Java</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/other/google-cloud.png">
+                            <span class="tooltiptext">
+                              <p>Google Cloud</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/frameworks/firebase.png">
+                            <span class="tooltiptext">
+                              <p>Firebase</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/sql.png">
+                            <span class="tooltiptext">
+                              <p>SQL</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj6-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj6-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+
+<!-- ============================= PeakMind ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-5" class="check-input-5" />
+          <label for="check-input-5" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-5.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj5-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light"><i class="bi bi-circle-fill h10 active"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj5-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/swift.png">
+                            <span class="tooltiptext">
+                              <p>Swift</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/frameworks/firebase.png">
+                            <span class="tooltiptext">
+                              <p>Firebase</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj5-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj5-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+    </div> <!-- End Row 1 -->
+
+    <!-- Row 2 -->
+    <div class="row">
+<!-- ============================= Bit Connect ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-4" class="check-input-4" />
+          <label for="check-input-4" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-4.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj4-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light"><i class="bi bi-circle-fill h10 active"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj4-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/java.png">
+                            <span class="tooltiptext">
+                              <p>Java</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/swift.png">
+                            <span class="tooltiptext">
+                              <p>Swift</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/frameworks/firebase.png">
+                            <span class="tooltiptext">
+                              <p>Firebase</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/other/figma.png">
+                            <span class="tooltiptext">
+                              <p>Figma</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj4-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj4-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+
+<!-- ============================= BYJU's Capstones ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-3" class="check-input-3" />
+          <label for="check-input-3" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-3.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj3-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light"><i class="bi bi-circle-fill h10 inactive"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj3-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/python.png">
+                            <span class="tooltiptext">
+                              <p>Python</p>
+                            </span>
+                          </div>
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/frameworks/pandas.png">
+                            <span class="tooltiptext">
+                              <p>Pandas</p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj3-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj3-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+    </div> <!-- End Row 2 -->
+
+    <!-- Row 3 -->
+    <div class="row">
+<!-- ============================= Electrical Circuit Calculator ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-2" class="check-input-2" />
+          <label for="check-input-2" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-2.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj2-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light"><i class="bi bi-circle-fill h10 inactive"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj2-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/python.png">
+                            <span class="tooltiptext">
+                              <p>Python</p>
+                            </span>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj2-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj2-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+
+<!-- ============================= Seam Carving ============================= -->
+      <div class="col">
+        <div class="expandable-container">
+          <input type="checkbox" id="check-input-1" class="check-input-1" />
+          <label for="check-input-1" class="expandable">
+              <div class="expandable-header">
+                  <div class="header">
+                    <!-- Header image -->
+                    <div class="row" style="padding: 30px;">
+                      <img class="header-img img-fluid" src="../img/project-1.png" style="border-radius: 20px;">
+                    </div> 
+
+                    <!-- Basic info -->
+                    <div class="row" style="padding: 20px;">
+                      <!-- Name -->
+                      <div class="col">
+                        <h5 class="work-section">name</h5>
+                        <div class="row">
+                          <div class="col-lg">
+                            <p class="work-desc" lng-tag="proj1-title"></p>
+                          </div>
+                          <!-- Blinker -->
+                          <div class="col-sm">
+                            <div class="blinking-light"><i class="bi bi-circle-fill h10 inactive"></i>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="col">
+                        <h5 class="work-section">role</h5>
+                        <p class="work-desc" lng-tag="proj1-role"></p>
+                      </div>
+                      <!-- Stack -->
+                      <div class="col">
+                        <h5 class="work-section">stack</h5>
+                        <div class="row">
+                          <div class="tooltip">
+                            <img class="work-stack" src="../img/proglang/java.png">
+                            <span class="tooltiptext">
+                              <p>Java</p> </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="divider"></div>
+                  
+
+                    <!-- Basic desciption -->
+                    <div class="row" style="padding: 30px;">
+                      <div class="col-10">
+                        <h5 class="work-section">what</h5>
+                        <p class="work-desc" lng-tag="proj1-desc"></p>
+                      </div>
+                    
+
+                      <div class="col" style="justify-content:baseline;">
+                        <i class="bi bi-arrow-down-square h1 white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+              <!-- More in-depth description -->
+              <div class="content">
+                  <h5 class="work-main-section">how/why</h5>
+                  <p lng-tag="proj1-longdesc"></p>
+              </div>
+          </label>
+        </div>
+      </div>
+    </div> <!-- End Row 3 -->
+  </div>
+
+<!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-6">
+          <div class="copyright-box">
+            <p class="copyright">&copy; <strong>Rina Reimer</strong></p>
+        </div>
+      </div>
+        <div class="col-md-6 col-md-6">
+          <div class="links">
+            <p lng-tag="footer-desc"></p>
+            <div class="row justify-items-center">
+              <div class="socials">
+                <div class="row align-items-center">
+                  <a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-mailbox"></i></span></a></li>
+                  <a href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span class="ico-square"><i class="bi bi-linkedin"></i></span></a></li>
+                  <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+
+  
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  
+    <!-- Template Main JS File -->
+    <script src="../js/main.js"></script>
+  
+    <!-- Translation Files -->
+    <script src="../js/translate.js"></script>
+    <script src="../js/index.js"></script>
+  
+    <script>
+      $('.carousel').carousel({
+  
+          pause: "null"
+  
+      })
+  </script>
+  
+  
+  </body>
+  </html>
