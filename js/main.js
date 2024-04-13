@@ -52,7 +52,7 @@ class Translate {
 		var attr = this.attribute;
 		var xrhFile = new XMLHttpRequest();
 		// load content data 
-		xrhFile.open("GET", "https://rina-reimer.github.io/lng/" + this.lng + ".json", false);
+		xrhFile.open("GET", "https://rinareimer.com/" + this.lng + ".json", false);
 		xrhFile.onreadystatechange = function () {
 			if (xrhFile.readyState === 4) {
 				if (xrhFile.status === 200 || xrhFile.status == 0) {
